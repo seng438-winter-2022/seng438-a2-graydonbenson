@@ -12,7 +12,9 @@
 
 # 1 Introduction
 
-//To write
+The purpose of this lab was for the group to develop our knowledge in the area of Blackbox Testing. Using both Equivalence and Boundary testing methods the group developed a test suite for the methods in the Range Class and Data Utilities Class. The use of automated testing in Unit was a great way to gain experience testing, as well the use of JMock allowed the group to practice our mocking skills. Each section of the lab allows the team to refine their skills in the design, development, and execution of testing. 
+
+
 
 # 2 Detailed description of unit test strategy
 
