@@ -2,12 +2,13 @@
 
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
-| Group \#:      |  7  |
-| -------------- | --- |
-| Student Names: |     |
-| Graydon Benson |     |
-|                |     |
-|                |     |
+| Group \#:       | 7 |
+|-----------------|---|
+| Student Names:  | Graydon Benson  |
+|                 | Eli St. James   |
+|                 | Seher Dawar     |
+|                 | Maxwell Botham  |
+
 
 # 1 Introduction
 
