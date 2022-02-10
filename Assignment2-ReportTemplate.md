@@ -52,12 +52,19 @@ getCentralValue()
 Test central values of positive, and negative integers, and positive and negative doubles. Also test 0 as central value, and invalid range exceptions. A range with size 1 (-1,-1) for example can also be tested. 
 
 getLength() 
+
 Range from a to a
+
 Range is null
+
 Range -ve to +ve
+
 Range is large
+
 Range is large and in doubles
+
 Range is defined incorrectly larger to smaller
+
 
 
 getUpperBound() 
@@ -72,49 +79,90 @@ Apply boundary limit testing on upper and lower boundaries of ranges to ensure v
 
 
 calculateColumnTotal(Values2D data, int column) 
+
 Test with null input for Values2D data
+
 Test with null input for int column
+
 Test with column at minimum boundary (0)
+
 Test with column at maximum boundary (index 4, in 5 column Values2D)
+
 Test with column just below maximum boundary (index 3, in 5 column Values2D)
+
 Test with column just above minimum boundary (index 1)
+
 Test with column just below minimum boundary (out of bounds, index -1)
+
 Test with column just above maximum boundary (out of bounds, index 5 in 5 column Values2D)
+
 Test with a large number of rows
+
 Test summing negative integers in a large number of rows
 
+
 calculateRowTotal(Values2D data, int row)
+
 Test with null input for Values2D data
+
 Test with null input for int row
+
 Test with row at minimum boundary (0)
+
 Test with row at maximum boundary (index 4, in 5 row Values2D)
+
 Test with row just below maximum boundary (index 3, in 5 row Values2D)
+
 Test with row just above minimum boundary (index 1)
+
 Test with row just below minimum boundary (out of bounds, index -1)
+
 Test with row just above maximum boundary (out of bounds, index 5 in 5 row Values2D)
+
 Test with a large number of columns
+
 Test summing negative integers in a large number of columns
 
+
+
 createNumberArray(double[] data) 
+
 Test with regular double[] input
+
 Test with empty double[] input
+
 Test with null input
+
 
 createNumberArray2D(double[][] data)
+
 Test with regular double[][] input
+
 Test with empty double[][] input
+
 Test with null input
+
 Test with populated double[][] with an empty double[] input
+
 Test with populated double [][] with a null double[] input
 
+
 getCumulativePercentages(KeyedValues data) 
+
 Test with null input for the KeyedValues keys
+
 Test with null input for KeyedValues object
+
 Test with 3 values 
+
 The keyedvalue object has 3 values
+
 The values are 0
+
 The values are a mix of positive and negatives
+
 The keyedvalue object has 7 values
+
 
 # 4 How the team work/effort was divided and managed
 
