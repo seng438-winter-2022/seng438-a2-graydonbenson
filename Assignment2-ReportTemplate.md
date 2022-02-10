@@ -150,7 +150,6 @@ Test with populated double [][] with a null double[] input
 getCumulativePercentages(KeyedValues data) 
 
 Test with null input for the KeyedValues keys
-
 Test with null input for KeyedValues object
 
 Test with 3 values 
