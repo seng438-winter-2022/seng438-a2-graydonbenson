@@ -12,7 +12,7 @@
 
 # 1 Introduction
 
-The purpose of this lab was for the group to develop our knowledge in the area of Blackbox Testing. Using both Equivalence and Boundary testing methods the group developed a test suite for the methods in the Range Class and Data Utilities Class. The use of automated testing in Unit was a great way to gain experience testing, as well the use of JMock allowed the group to practice our mocking skills. Each section of the lab allows the team to refine their skills in the design, development, and execution of testing. 
+The purpose of this lab was for the group to develop our knowledge in the area of Blackbox Testing. Using both Equivalence and Boundary testing methods, the group developed a test suite for the methods in the Range Class and Data Utilities Class. The use of automated testing in JUnit was a great way to gain experience testing, as well the use of JMock allowed the group to practice our mocking skills. Each section of the lab allows the team to refine their skills in the design, development, and execution of testing. 
 
 
 
@@ -26,7 +26,7 @@ getUpperBound()<br>
 getLowerBound()<br>
 contains(double value)<br>
 
-## BlackBox
+## BlackBox Testing
 
 ### Equivalence Classes
 
@@ -46,7 +46,9 @@ In the Range class, the contains(double value) method is the most suitable metho
 
 Another example would be for the calculateRowTotal method. This method takes in a Values2D object which is essentially a table of data, and an integer value representing the row at which all the values inside that row will be added together.  The way we plan to test this method is by mocking a Values2D object with a set amount of rows, then passing in, for the int row argument, a variety of values. To begin, we will pass in a value that is greater than the amount of rows. For example, if we mock a Values2D object with 9 rows (rows [0, 8]) and x columns, we would pass in 9 for the int row argument, which would be invalid given that the last row has an index of 8. We would also test at the boundaries of the number of rows in the Values2D object. For the example above (Values2D with 9 rows), we could pass in 8 (maximum boundary of rows) which should be valid, given index 8 is the last row. We can also pass in 0, given that the first row index is 0. We will also test this method by passing in a negative value for the ‘int row’ argument. Lastly, we will pass in a row index in the expected boundaries, such as 4.
 
+### Mocking Objects with JMock
 calculateColumnTotal, calculateRowTotal, getCumulativePercentages all require mocking, as Values2D and KeyedValues are Interfaces and cannot be instantiated as objects. Once we have created a mock object, we can apply the same type of boundary or equivalence class testing on the objects to confirm expected output. The benefits of using mocking is we can replicate realistic data, and how our application will respond to a variety of scenarios, and how these results are achieved. The downsides of this process are the teardown and cleanup process. There is a small level of additional setup, and as well refactoring code with Mocking is slightly more difficult. 
+Using JMock with Expectations is slightly challenging for Black Box Testing since we cannot see the source code. It is quite hard to figure out exactly what to expect from the code in terms of invoking functions. We had to use "atleast(n).of-will" expectations instead of "one-will" due to the method being called multiple times.  
 
 # 3 Test cases developed
 
@@ -54,7 +56,7 @@ getCentralValue()<br>
 Test central values of positive, and negative integers, and positive and negative doubles. Also test 0 as central value, and invalid range exceptions. A range with size 1 (-1,-1) for example can also be tested. 
 
 getLength()<br>
-Range from a to a<br>
+Range from a to a (where a is a double) <br>
 Range is null<br>
 Range -ve to +ve<br>
 Range is large<br>
@@ -111,11 +113,10 @@ Test with populated double [][] with a null double[] input<br>
 getCumulativePercentages(KeyedValues data)<br>
 Test with null input for the KeyedValues keys<br>
 Test with null input for KeyedValues object<br>
-Test with 3 values <br>
-The keyedvalue object has 3 values<br>
-The values are 0<br>
-The values are a mix of positive and negatives<br>
-The keyedvalue object has 7 values<br>
+Test with 3 values for KeyedValues object <br>
+Test with all values zero for KeyedValues object<br>
+Test with positive and negative values for KeyedValues object <br>
+Test with 7 values for KeyedValues object <br>
 
 
 # 4 How the team work/effort was divided and managed
@@ -124,8 +125,8 @@ To complete this lab, we began by each setting up our Eclipse IDE individually. 
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 
-The usage of JMock and the discrepancies in the versions of JFree uploaded to Github were a few difficulties we faced while writing this report and these test suites. For JMock, we were stumped by the mocking cases that called the same function multiple times since “one-will” expectation does not cater to this case. We had to read the JavaDocs to learn about the “atleast-pair” expectation pair. 
+The usage of JMock and the discrepancies in the versions of JFree uploaded to Github were a few difficulties we faced while writing this report and these test suites. For JMock, we were stumped by the mocking cases that called the same function multiple times since “one-will” expectation does not cater to this case. We had to read the JavaDocs to learn about the “atleast-pair” expectation pair. Additionally, the discrepancy in versions of JFree avaliable really caused confusion within the group since we were getting different responses for the same test cases. We had to figure out the discrepancy on our own, and commit to a single version. 
 
 # 6 Comments/feedback on the lab itself
 
-The assignment was interesting, interactive, and at times challenging. It really gave us a taste of what it is like to test a program, and develop thoughtful test cases. It was a great learning opportunity to apply what we learned in class about equivalence and boundary testing. One thing we noticed was that two different packages were distributed with different Jar’s. This made it confusing as some tests passed, and others failed, using the same test cases.  It took us a while to figure out that this was the case, as we had to compare different versions of the repository that existed. Overall, it was a good assignment.
+The assignment was interesting, interactive, and at times challenging. It really gave us a taste of what it is like to test a program, and develop thoughtful test cases. It was a great learning opportunity to apply what we learned in class about equivalence and boundary testing. One thing we noticed was that two different packages were distributed with different JARs. This made it confusing as some tests passed, and others failed, using the same test cases.  It took us a while to figure out that this was the case, as we had to compare different versions of the repository that existed. Overall, it was a good assignment.
