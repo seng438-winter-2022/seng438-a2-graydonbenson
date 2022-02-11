@@ -22,13 +22,13 @@ The purpose of this lab was for the group to develop our knowledge in the area o
 Here are the five methods we chose to test for the class Range:<br>
 getCentralValue()<br>
 getLength()<br>
-getUpperBound() 
-getLowerBound() 
-contains(double value) 
+getUpperBound()<br>
+getLowerBound()<br>
+contains(double value)<br>
 
-BlackBox
+## BlackBox
 
-Equivalence Classes
+### Equivalence Classes
 
 Equivalence class testing involves dividing possible method inputs into partitions or “buckets” that would be considered similar to one another. In each test case, we will define a unique equivalence class that groups common inputs together. All of the methods we are testing take in integers or doubles as input, therefore we can group common integers within the same set together to avoid redundancy. For instance in getUpperBound(), a Range(0,1) object will have the same output as a Range(-1,1) object..   
 
@@ -38,7 +38,7 @@ On the other hand, U will consist of the following sub-partitions - String Value
 The domain of createNumberArray is all arrays made up of doubles.  We can partition our possible inputs into Expected or Legal Inputs (E) and Unexpected or Illegal inputs (U). E will consist of the following sub-partitions - Negative Integer Arrays, Arrays including Zero, Positive Integer Arrays, Negative Double Arrays, and Positive Double Arrays. 
 On the other hand, U will consist of the following sub-partitions - String Valued Arrays, Char Valued Arrays, and Float Valued Arrays. 
 
-Boundary Value Analysis
+### Boundary Value Analysis
 
 Boundary value testing was created because of the fact that programs often fail when arguments are provided that are at or near the boundaries of valid input, and are expected to fail when outside the boundaries. Some bugs can only be detected when programs are tested with values that are exactly on a boundary. For example, if a function expects input that is greater than 10 but less than 20, but the program actually accepts values greater than or equal to 10 but less than 20, a test that provides the value 9 will still pass. The only way to detect the fault is by providing an input of value 10. However, boundary value analysis does not only consider inputs that are equal to defined boundaries, but also those that are out of bounds (above maximum boundary, or below minimum boundary). A typical boundary value testing strategy involves 7 tests: one slightly above the upper bound, one at the upper bound, one slightly below the upper bound, one inside bounds, one slightly above the lower bound, one at the lower bound, and one slightly below the lower bound.
 
@@ -54,17 +54,11 @@ getCentralValue()
 Test central values of positive, and negative integers, and positive and negative doubles. Also test 0 as central value, and invalid range exceptions. A range with size 1 (-1,-1) for example can also be tested. 
 
 getLength() 
-
-Range from a to a
-
+Range from a to a<br>
 Range is null
-
 Range -ve to +ve
-
 Range is large
-
 Range is large and in doubles
-
 Range is defined incorrectly larger to smaller
 
 
