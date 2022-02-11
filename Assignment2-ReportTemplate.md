@@ -20,7 +20,7 @@ The purpose of this lab was for the group to develop our knowledge in the area o
 
 
 Here are the five methods we chose to test for the class Range:
-getCentralValue()
+getCentralValue()<br>
 getLength() 
 getUpperBound() 
 getLowerBound() 
