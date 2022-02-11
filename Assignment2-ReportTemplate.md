@@ -50,113 +50,72 @@ calculateColumnTotal, calculateRowTotal, getCumulativePercentages all require mo
 
 # 3 Test cases developed
 
-getCentralValue()
+getCentralValue()<br>
 Test central values of positive, and negative integers, and positive and negative doubles. Also test 0 as central value, and invalid range exceptions. A range with size 1 (-1,-1) for example can also be tested. 
 
-getLength() 
+getLength()<br>
 Range from a to a<br>
-Range is null
-Range -ve to +ve
-Range is large
-Range is large and in doubles
-Range is defined incorrectly larger to smaller
+Range is null<br>
+Range -ve to +ve<br>
+Range is large<br>
+Range is large and in doubles<br>
+Range is defined incorrectly larger to smaller<br>
 
-
-
-getUpperBound() 
+getUpperBound()<br>
 Test upper-bounds with ranges of values of positive, and negative integers, and positive and negative doubles. Also test when the upper bound is 0, positive or negative, and when it is an integer or a double. Test with range size 1, (upper and lower bounds are the same). Upper and lower bounds same == range size 0
 
-getLowerBound() 
-Test lower-bounds with ranges of values of positive, and negative integers, and positive and negative doubles. Also test when the lower bound is 0, positive or negative, and when it is an integer or a double. Test with range size 1, (upper and lower bounds are the same). 
+getLowerBound()<br>
+Test lower-bounds with ranges of values of positive, and negative integers, and positive and negative doubles. Also test when the lower bound is 0, positive or negative, and when it is an integer or a double. Test with range size 1, (upper and lower bounds are the same).
 
 
-contains(double value)
+contains(double value)<br>
 Apply boundary limit testing on upper and lower boundaries of ranges to ensure values are correctly indicated as present or not present. Test on and above/below these boundary levels. Test ranges with integers and doubles, both positive and negative. 
 
 
-calculateColumnTotal(Values2D data, int column) 
+calculateColumnTotal(Values2D data, int column)<br>
+Test with null input for Values2D data<br>
+Test with null input for int column<br>
+Test with column at minimum boundary (0)<br>
+Test with column at maximum boundary (index 4, in 5 column Values2D)<br>
+Test with column just below maximum boundary (index 3, in 5 column Values2D)<br>
+Test with column just above minimum boundary (index 1)<br>
+Test with column just below minimum boundary (out of bounds, index -1)<br>
+Test with column just above maximum boundary (out of bounds, index 5 in 5 column Values2D)<br>
+Test with a large number of rows<br>
+Test summing negative integers in a large number of rows<br>
 
-Test with null input for Values2D data
+calculateRowTotal(Values2D data, int row)<br>
+Test with null input for Values2D data<br>
+Test with null input for int row<br>
+Test with row at minimum boundary (0)<br>
+Test with row at maximum boundary (index 4, in 5 row Values2D)<br>
+Test with row just below maximum boundary (index 3, in 5 row Values2D)<br>
+Test with row just above minimum boundary (index 1)<br>
+Test with row just below minimum boundary (out of bounds, index -1)<br>
+Test with row just above maximum boundary (out of bounds, index 5 in 5 row Values2D)<br>
+Test with a large number of columns<br>
+Test summing negative integers in a large number of columns<br>
 
-Test with null input for int column
+createNumberArray(double[] data)<br>
+Test with regular double[] input<br>
+Test with empty double[] input<br>
+Test with null input<br>
 
-Test with column at minimum boundary (0)
+createNumberArray2D(double[][] data)<br>
+Test with regular double[][] input<br>
+Test with empty double[][] input<br>
+Test with null input<br>
+Test with populated double[][] with an empty double[] input<br>
+Test with populated double [][] with a null double[] input<br>
 
-Test with column at maximum boundary (index 4, in 5 column Values2D)
-
-Test with column just below maximum boundary (index 3, in 5 column Values2D)
-
-Test with column just above minimum boundary (index 1)
-
-Test with column just below minimum boundary (out of bounds, index -1)
-
-Test with column just above maximum boundary (out of bounds, index 5 in 5 column Values2D)
-
-Test with a large number of rows
-
-Test summing negative integers in a large number of rows
-
-
-calculateRowTotal(Values2D data, int row)
-
-Test with null input for Values2D data
-
-Test with null input for int row
-
-Test with row at minimum boundary (0)
-
-Test with row at maximum boundary (index 4, in 5 row Values2D)
-
-Test with row just below maximum boundary (index 3, in 5 row Values2D)
-
-Test with row just above minimum boundary (index 1)
-
-Test with row just below minimum boundary (out of bounds, index -1)
-
-Test with row just above maximum boundary (out of bounds, index 5 in 5 row Values2D)
-
-Test with a large number of columns
-
-Test summing negative integers in a large number of columns
-
-
-
-createNumberArray(double[] data) 
-
-Test with regular double[] input
-
-Test with empty double[] input
-
-Test with null input
-
-
-createNumberArray2D(double[][] data)
-
-Test with regular double[][] input
-
-Test with empty double[][] input
-
-Test with null input
-
-Test with populated double[][] with an empty double[] input
-
-Test with populated double [][] with a null double[] input
-
-
-getCumulativePercentages(KeyedValues data) 
-
-Test with null input for the KeyedValues keys
-Test with null input for KeyedValues object
-
-Test with 3 values 
-
-The keyedvalue object has 3 values
-
-The values are 0
-
-The values are a mix of positive and negatives
-
-The keyedvalue object has 7 values
+getCumulativePercentages(KeyedValues data)<br>
+Test with null input for the KeyedValues keys<br>
+Test with null input for KeyedValues object<br>
+Test with 3 values <br>
+The keyedvalue object has 3 values<br>
+The values are 0<br>
+The values are a mix of positive and negatives<br>
+The keyedvalue object has 7 values<br>
 
 
 # 4 How the team work/effort was divided and managed
