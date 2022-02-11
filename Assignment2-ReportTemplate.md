@@ -19,9 +19,9 @@ The purpose of this lab was for the group to develop our knowledge in the area o
 # 2 Detailed description of unit test strategy
 
 
-Here are the five methods we chose to test for the class Range:
+Here are the five methods we chose to test for the class Range:<br>
 getCentralValue()<br>
-getLength() 
+getLength()<br>
 getUpperBound() 
 getLowerBound() 
 contains(double value) 
